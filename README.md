@@ -1,4 +1,4 @@
-# Burger Builder: Console Burger Shop Simulator
+# Burger Builder: Console Burger Shop Simulator 🍔
 ## 햄버거 가게 주문 및 조리 시뮬레이터 (Java 콘솔 미니 프로젝트)
 
 ## 1) 프로젝트 개요
