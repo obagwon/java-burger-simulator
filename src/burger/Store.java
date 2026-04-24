@@ -198,26 +198,28 @@ public class Store {
 
         CustomBurger.Builder builder = new CustomBurger.Builder();
 
-        ConsolePrinter.printBlock("""
+        ConsolePrinter.printBlock(String.format("""
                 1단계. 패티 종류를 선택하세요.
-                1. 소고기 패티
-                2. 치킨 패티
-                """);
-
+                1. 소고기 패티 (개당 %d원)
+                2. 치킨 패티 (개당 %d원)
+                """, Ingredients.BEEF_PATTY.getPrice(), Ingredients.CHICKEN_PATTY.getPrice()));
         int pattyType = readInt("선택: ");
 
         String selectedPatty;
+        int selectedPattyPrice;
 
         if (pattyType == 1) {
             selectedPatty = "BEEF";
+            selectedPattyPrice = Ingredients.BEEF_PATTY.getPrice();
         } else if (pattyType == 2) {
             selectedPatty = "CHICKEN";
+            selectedPattyPrice = Ingredients.CHICKEN_PATTY.getPrice();
         } else {
             ConsolePrinter.printLine("잘못된 패티 선택입니다.");
             return;
         }
 
-        int pattyCount = readInt("2단계. 패티 개수: ");
+        int pattyCount = readInt("2단계. 패티 개수 (개당 " + selectedPattyPrice + "원): ");
 
         if (pattyCount <= 0) {
             ConsolePrinter.printLine("패티는 1개 이상 선택해야 합니다.");
@@ -226,7 +228,7 @@ public class Store {
 
         builder.patty(selectedPatty, pattyCount);
 
-        int cheeseCount = readInt("3단계. 치즈 개수: ");
+        int cheeseCount = readInt("3단계. 치즈 개수 (개당 " + Ingredients.CHEESE.getPrice() + "원): ");
 
         if (cheeseCount < 0) {
             ConsolePrinter.printLine("치즈 개수는 0개 이상이어야 합니다.");
@@ -235,24 +237,24 @@ public class Store {
 
         builder.cheese(cheeseCount);
 
-        if (readYesNo("4단계. 양상추를 추가하시겠습니까? (Y/N): ")) {
+        if (readYesNo("4단계. 양상추를 추가하시겠습니까? (+" + Ingredients.LETTUCE.getPrice() + "원) (Y/N): ")) {
             builder.lettuce();
         }
 
-        if (readYesNo("5단계. 토마토를 추가하시겠습니까? (Y/N): ")) {
+        if (readYesNo("5단계. 토마토를 추가하시겠습니까? (+" + Ingredients.TOMATO.getPrice() + "원) (Y/N): ")) {
             builder.tomato();
         }
 
-        if (readYesNo("6단계. 피클을 추가하시겠습니까? (Y/N): ")) {
+        if (readYesNo("6단계. 피클을 추가하시겠습니까? (+" + Ingredients.PICKLE.getPrice() + "원) (Y/N): ")) {
             builder.pickle();
         }
 
-        ConsolePrinter.printBlock("""
+        ConsolePrinter.printBlock(String.format("""
                 7단계. 양파 종류를 선택하세요.
                 0. 없음
-                1. 생양파
-                2. 구운양파
-                """);
+                1. 생양파 (+%d원)
+                2. 구운양파 (+%d원)
+                """, Ingredients.RAW_ONION.getPrice(), Ingredients.GRILLED_ONION.getPrice()));
 
         int onionChoice = readInt("선택: ");
 
@@ -265,17 +267,18 @@ public class Store {
             return;
         }
 
-        if (readYesNo("8단계. 베이컨을 추가하시겠습니까? (Y/N): ")) {
+        if (readYesNo("8단계. 베이컨을 추가하시겠습니까? (+" + Ingredients.BACON.getPrice() + "원) (Y/N): ")) {
             builder.bacon();
         }
 
-        ConsolePrinter.printBlock("""
+        ConsolePrinter.printBlock(String.format("""
                 9단계. 소스를 선택하세요. 하나 이상 선택해야 합니다.
-                1. 케첩
-                2. 마요
-                3. 머스타드
-                4. 스파이시 소스
-                """);
+                1. 케첩 (+%d원)
+                2. 마요 (+%d원)
+                3. 머스타드 (+%d원)
+                4. 스파이시 소스 (+%d원)
+                """, Ingredients.KETCHUP.getPrice(), Ingredients.MAYO.getPrice(),
+                Ingredients.MUSTARD.getPrice(), Ingredients.SPICY.getPrice()));
 
         ConsolePrinter.printPrompt("선택 예시: 1 4 → ");
         String sauceInput = scanner.nextLine().trim();
