@@ -249,12 +249,12 @@ public class Store {
             builder.pickle();
         }
 
-        ConsolePrinter.printBlock(String.format("""
+        ConsolePrinter.printBlock("""
                 7단계. 양파 종류를 선택하세요.
                 0. 없음
-                1. 생양파 (+%d원)
-                2. 구운양파 (+%d원)
-                """, Ingredients.RAW_ONION.getPrice(), Ingredients.GRILLED_ONION.getPrice()));
+                1. 생양파 (추가요금 없음)
+                2. 구운양파 (추가요금 없음)
+                """);
 
         int onionChoice = readInt("선택: ");
 
@@ -271,14 +271,13 @@ public class Store {
             builder.bacon();
         }
 
-        ConsolePrinter.printBlock(String.format("""
+        ConsolePrinter.printBlock("""
                 9단계. 소스를 선택하세요. 하나 이상 선택해야 합니다.
-                1. 케첩 (+%d원)
-                2. 마요 (+%d원)
-                3. 머스타드 (+%d원)
-                4. 스파이시 소스 (+%d원)
-                """, Ingredients.KETCHUP.getPrice(), Ingredients.MAYO.getPrice(),
-                Ingredients.MUSTARD.getPrice(), Ingredients.SPICY.getPrice()));
+                1. 케첩 (추가요금 없음)
+                2. 마요 (추가요금 없음)
+                3. 머스타드 (추가요금 없음)
+                4. 스파이시 소스 (추가요금 없음)
+                """);
 
         ConsolePrinter.printPrompt("선택 예시: 1 4 → ");
         String sauceInput = scanner.nextLine().trim();
