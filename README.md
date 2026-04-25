@@ -172,31 +172,31 @@ java -cp out burger.Main
   <tr>
     <td align="center">
       <p>1번 메뉴 보기 화면</p>
-      <img src="capture/menu_1.png" width="380">
+      <img src="capture/menu_1.png" width="320">
     </td>
     <td align="center">
       <p>2번 기본 버거 주문 화면</p>
-      <img src="capture/menu_2.png" width="380">
+      <img src="capture/menu_2.png" width="320">
     </td>
   </tr>
   <tr>
     <td align="center">
       <p>3번 커스텀 버거 주문 화면</p>
-      <img src="capture/menu_3.png" width="380">
+      <img src="capture/menu_3.png" width="320">
     </td>
     <td align="center">
       <p>4번 주문 내역 보기 화면</p>
-      <img src="capture/menu_4.png" width="380">
+      <img src="capture/menu_4.png" width="320">
     </td>
   </tr>
   <tr>
     <td align="center">
       <p>5번 재고 확인 화면</p>
-      <img src="capture/menu_5.png" width="380">
+      <img src="capture/menu_5.png" width="320">
     </td>
     <td align="center">
       <p>6번 매출 / 인기 메뉴 통계 화면</p>
-      <img src="capture/menu_6.png" width="380">
+      <img src="capture/menu_6.png" width="320">
     </td>
   </tr>
 </table>
