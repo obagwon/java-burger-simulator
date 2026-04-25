@@ -168,42 +168,38 @@ java -cp out burger.Main
 ================================
 ```
 
-### 기본 버거 주문 예시
-```text
-[기본 버거 주문]
-1. 클래식버거 - 4500원
-2. 치즈버거 - 5000원
-...
-주문할 메뉴 번호: 2
-수량: 2
-[주문 확인]
-메뉴: 치즈버거
-수량: 2
-총액: 10000원
-주문하시겠습니까? (Y/N): Y
-주문이 접수되었습니다.
-주문번호: 1001
-```
-
-### 커스텀 버거 주문 예시
-```text
-[커스텀 버거 만들기]
-1단계. 패티 종류를 선택하세요.
-...
-9단계. 소스를 선택하세요. 하나 이상 선택해야 합니다.
-선택 예시: 1 4 → 1 3
-[커스텀 버거 구성 결과]
-재료: 소고기 패티 x 2, 치즈, 양상추, 머스타드
-예상 가격: 6100원
-이 구성으로 주문하시겠습니까? (Y/N): Y
-```
-
-### 조리 알림 예시
-```text
-[조리 알림]
-- 주문 #1001 치즈버거 x 2 조리를 시작했습니다.
-- 주문 #1001 치즈버거 x 2 조리가 완료되었습니다.
-```
+<table>
+  <tr>
+    <td align="center">
+      <p>1번 메뉴 보기 화면</p>
+      <img src="capture/menu_1.png" width="380">
+    </td>
+    <td align="center">
+      <p>2번 기본 버거 주문 화면</p>
+      <img src="capture/menu_2.png" width="380">
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <p>3번 커스텀 버거 주문 화면</p>
+      <img src="capture/menu_3.png" width="380">
+    </td>
+    <td align="center">
+      <p>4번 주문 내역 보기 화면</p>
+      <img src="capture/menu_4.png" width="380">
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <p>5번 재고 확인 화면</p>
+      <img src="capture/menu_5.png" width="380">
+    </td>
+    <td align="center">
+      <p>6번 매출 / 인기 메뉴 통계 화면</p>
+      <img src="capture/menu_6.png" width="380">
+    </td>
+  </tr>
+</table>
 
 ---
 
